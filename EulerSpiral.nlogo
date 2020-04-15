@@ -16,7 +16,7 @@ to go
   [
     pen-down
     right ticks * turn-angle
-    forward 1
+    forward step-size
   ]
   tick
 end
@@ -49,10 +49,10 @@ ticks
 30.0
 
 BUTTON
-23
-130
-89
-163
+21
+206
+87
+239
 setup
 setup
 NIL
@@ -66,10 +66,10 @@ NIL
 1
 
 BUTTON
-110
-128
-173
-161
+108
+204
+171
+237
 go
 go
 T
@@ -84,51 +84,53 @@ NIL
 
 INPUTBOX
 37
-51
+21
 156
-111
+81
 turn-angle
-6.8736
+6.4231476
 1
 0
 Number
 
+CHOOSER
+29
+106
+167
+151
+step-size
+step-size
+1 0.1 0.01
+2
+
 @#$#@#$#@
 ## WHAT IS IT?
 
-(a general understanding of what the model is trying to show or explain)
+Netlogo implementation for a discrete Euler spiral.
+
+Inspired by this tweet by Matt Henderson @matthen2: https://twitter.com/matthen2/status/1249611168265547776?s=20
 
 ## HOW IT WORKS
 
-(what rules the agents use to create the overall behavior of the model)
+The butterfly adjusts its heading to the right by increasing multiples of the turn-angle in degrees input by the user before thking a step forward. The multiples are determined by the number of ticks that have passed.
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
+Input a turn angle in degrees. The input should be a real number. A negative number will make the butterfly turn to the left.
 
-## THINGS TO NOTICE
+Choose a step size - this will affect the scale of your visualization. 
 
-(suggested things for the user to notice while running the model)
+Click setup.
+
+Click go to make the butterfly fly! Adjust the speed of the visualization using the 'ticks' slider at the top
 
 ## THINGS TO TRY
 
-(suggested things for the user to try to do (move sliders, switches, etc.) with the model)
-
-## EXTENDING THE MODEL
-
-(suggested things to add or change in the Code tab to make the model more complicated, detailed, accurate, etc.)
-
-## NETLOGO FEATURES
-
-(interesting or unusual features of NetLogo that the model uses, particularly in the Code tab; or where workarounds were needed for missing features)
-
-## RELATED MODELS
-
-(models in the NetLogo Models Library and elsewhere which are of related interest)
+Try different angles. Which angles lead to an exploration of the entire space? Which angles create a limited path? Can you find an angle that creates an Euler spiral of Euler spirals?
 
 ## CREDITS AND REFERENCES
 
-(a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
+Inspired by this tweet by Matt Henderson @matthen2: https://twitter.com/matthen2/status/1249611168265547776?s=20
 @#$#@#$#@
 default
 true
